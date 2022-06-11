@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Smooch&display=swap" rel="stylesheet">
+    <style>
+        body
+        {
+            display: flex;
+            flex-direction: column;
+        }
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: rgb(63, 26, 97);
+            color: white;
+            flex-wrap: wrap;
+        }
+        .Menu ul
+        {
+            display: flex;
+        }
+        .Menu ul li
+        {
+            display: block;
+        }
+        .Menu ul li a
+        {
+            text-decoration: none;
+            display: block;
+            padding: 0px 10px;
+            color: white;
+            font-weight: bold;
+        }
+        .Icon i
+        {
+            padding: 0px 5px;
+        }
+        .Logo , span
+        {
+            font-family: 'Smooch', cursive;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        section
+        {
+            display: flex;
+        }
+        .A1
+        {
+            flex: 0 0 20vw;
+            background-color: beige;
+            justify-content: flex-start;
+            padding: 10px;
+            align-content: center;
+        }
+        .A1 ul
+        {
+            list-style: none;
+        }
+        .A1 ul li
+        {
+            border-bottom: 3px solid white ;
+        }
+        .A1 ul li  a
+        {
+            padding: 10px 0px 10px 0px;
+            text-decoration: none;
+            color: black;
+            display: block;
+            font-weight: bold;
+        }
+        .A1 img
+        {
+            width: 100%;
+            padding: 10px 0px;
+        }
+        article
+        {
+            padding: 20px;
+            text-align: justify;
+        }
+        article h3 , p
+        {
+            padding: 10px 0px ;
+        }
+        .Services
+        {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .Container
+        {
+            border: 2px solid rgb(199, 198, 198);
+            flex-basis: 33%;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+        }
+        .Container h4, p
+        {
+            padding: 10px 0px;
+        }
+        .Container img
+        {
+            width: 100%;
+        }
+        .Container button
+        {
+            padding: 10px 20px;
+            border-style: none;
+            border-radius: 0px;
+            background-color: rgb(63, 26, 97);
+            color :white;
+            align-self: flex-start;
+            margin-top: auto;
+        }
+        footer
+        {
+            padding: 10px;
+            background-color: rgb(63, 26, 97);
+            color: white;
+            text-align: center;
+        }
+        .A2
+        {
+            background-color: beige;
+            padding: 10px;
+        }
+        .A2 input
+        {
+            padding: 5px;
+            border-radius: none;     
+            width: 100%;       
+        }
+        .A2 button
+        {
+            width: 100%;
+            padding: 10px 20px;
+            border-style: none;
+            border-radius: 0px;
+            background-color: rgb(63, 26, 97);
+            color :white;
+            margin:10px 0px;
+            font-weight: bold;
+        }
+        .Courses ul
+        {
+            list-style: none;
+        }
+        .Courses ul li
+        {
+            border: 2px solid rgb(63, 26, 97);
+            margin: 10px 0px;
+            padding: 10px;
+            text-align: center;
+            background-color: white;
+            font-weight: bold;
+        }
+        .Courses ul li a
+        {
+            text-decoration: none;
+            text-align: justify;
+        }
+        @media (max-width:900px)
+        {
+            .Container
+            {
+                flex-basis: 49%;
+                margin-bottom: 10px;
+                justify-content: space-between;
+            }
+        }
+        @media (max-width:700px)
+        {
+            section
+            {
+                display: block;
+            }
+            .A1
+            {
+                order: 2;
+            }
+            article
+            {
+                order: 1;
+            }
+            .A2
+            {
+                order: 3;
+            } 
+        }
+        @media (max-width:550px)
+        {
+            header
+            {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .Logo
+            {
+                order: 1;
+                margin: 5px 0px;
+            }
+            .Menu
+            {
+                order: 2;
+                margin: 5px 0px;
+            }
+            .Icon
+            {
+                order: 3;
+                margin: 5px 0px;
+            }
+            .Services .Container
+            {
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="Logo">
+            Riza Computers
+        </div>
+        <div class="Menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="Icon">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-google"></i>
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+    </header>
+
+    <section>
+        <aside class="A1">
+            <div class="Social">
+                <ul>
+                    <li><a href="">Some Link #1</a></li>
+                    <li><a href="">Some Link #2</a></li>
+                    <li><a href="">Some Link #3</a></li>
+                    <li><a href="">Some Link #4</a></li>
+                    <li><a href="">Some Link #5</a></li>
+                </ul>
+            </div>
+            <img src="/Images/D.jpg" alt="">
+        </aside>
+        <article>
+            <h3>Welcome to Riza Computers</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At quam cupiditate explicabo dicta expedita esse natus minima dolore repellat? Sit quidem dicta sapiente perferendis vero eveniet quod est esse voluptate at mollitia placeat fuga consequuntur quis, nemo tenetur officiis libero pariatur! Maxime deserunt accusamus repellat doloribus et voluptates numquam veritatis.</p>
+            <h3>Our Services</h3>
+
+            <div class="Services">
+                <div class="Container">
+                    <img src="/Images/A.jpg" alt="">
+                    <h4>Web Development</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quosst labore et vel sint quidem! Aperiam saepe enim dolore. Ad, repellendus.!</p>
+                    <button>Read More</button>
+                </div>
+                <div class="Container">
+                    <img src="/Images/B.jpg" alt="">
+                    <h4>App Development</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quos in odit voluptatem, nostrum consequatur non deserunt et qui enim!</p>
+                    <button>Read More</button>
+                </div>
+                <div class="Container">
+                    <img src="/Images/C.jpg" alt="">
+                    <h4>Game Development</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quos in odit voluptatem, nostrum consequatur non deserunt et qui enim!</p>
+                    <button>Read More</button>
+                </div>
+            </div>
+        </article>
+        <aside class="A2">
+            <input type="search" placeholder="Enter to Search">
+            <button>Click to Search</button>
+
+            <div class="Courses">
+                <ul>
+                    <li><a href="">Web Development</a></li>
+                    <li><a href="">App Development</a></li>
+                    <li><a href="">Game Development</a></li>
+                    <li><a href="">Graphics Development</a></li>
+                    <li><a href="">Drivers Development</a></li>
+                </ul>
+            </div>
+        </aside>
+    </section>
+
+    <footer>
+        &copy; <span>Riza Computers.</span> Made By Zubair-Gujjar With <i style="color:yellow;" class="fa-solid fa-heart"></i> and CSS
+    </footer>
+</body>
+</html>
